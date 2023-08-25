@@ -6,11 +6,11 @@
         "activeTab"
     ],
     "manifest_version": 3,
-    "author": "",
+    "author": "Leon",
     "icons": {
-        "16": "icon-16.png",
-        "48": "icon-48.png",
-        "128": "icon-128.png"
+        "16": "research-16.png",
+        "48": "research-48.png",
+        "128": "research-128.png"
     },
     "action": {
         "default_popup": "popup.html",
