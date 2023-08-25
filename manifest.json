@@ -1,12 +1,17 @@
 {
-    "name": "Youglish & Howjsay Search by Hovering",
+    "name": "Youglish & Howjsay Pronunciation Search",
     "version": "1.0.0",
-    "description": "This is an extension to look up pronunciation on Youglish website by hovering over the text.",
+    "description": "Provides floating buttons for a quick search on word pronunciation on Youglish and Howjsay",
     "permissions": [
         "activeTab"
     ],
     "manifest_version": 3,
     "author": "",
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
     "action": {
         "default_popup": "popup.html",
         "default_title": "Youglish Search"

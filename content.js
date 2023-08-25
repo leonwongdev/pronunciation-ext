@@ -1,5 +1,4 @@
 // content.js
-// console.log("Loading content script");
 function createFloatingButtonContainer(x, y) {
   const container = document.createElement("div");
 
@@ -31,7 +30,6 @@ function createFloatingButtonContainer(x, y) {
   container.style.left = x + 20 + "px";
   container.style.top = y + 10 + "px";
 
-  // document.body.appendChild(button);
   document.body.appendChild(container);
   container.appendChild(youglishButton);
   container.appendChild(howjsayButton);
