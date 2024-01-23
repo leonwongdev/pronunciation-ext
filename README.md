@@ -29,7 +29,4 @@ If you encounter any issues or have suggestions for improvement, feel free to [o
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-
-**Note:** Replace "your-username/your-repo" in the issue link with your actual GitHub username and repository name.
 
