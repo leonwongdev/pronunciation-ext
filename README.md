@@ -13,12 +13,12 @@ You can download and install the extension from the [Chrome Web Store](https://c
 ## Features
 
 - Quick access to word pronunciation on Youglish and Howjsay.
-- Floating buttons for convenient use while browsing.
+- Floating buttons for convenient use when selecting text.
 
 ## Usage
 
 1. Install the extension from the Chrome Web Store.
-2. Once installed, you will see floating buttons for Youglish and Howjsay pronunciation searches.
+2. Once installed and selecting text, you will see floating buttons for Youglish and Howjsay pronunciation searches.
 3. Click on the respective button to quickly search for the pronunciation of a word.
 
 ## Feedback and Issues
