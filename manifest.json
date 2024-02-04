@@ -1,6 +1,6 @@
 {
     "name": "Dictionary Search (Dictionary.com/Youglish)",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Provides floating buttons for a quick search on word pronunciation on multiple websites.",
     "permissions": [
         "activeTab"
@@ -29,5 +29,9 @@
             ],
             "run_at": "document_end"
         }
-    ]
+    ],
+    "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": ["images/brandyg.png", "images/cam-dict.jpeg", "images/dict-com.png", "images/howjsay.png"]
+    }]
 }

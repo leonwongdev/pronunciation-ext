@@ -1,4 +1,6 @@
 // content.js
+console.debug("Loaded dictionary search extension");
+
 let websiteButtonList = [];
 
 function createFloatingButtonContainer(x, y) {
@@ -9,13 +11,26 @@ function createFloatingButtonContainer(x, y) {
 
   container.className = "floating-button-container";
 
-  createWebsiteButton("Howjsay", "https://howjsay.com/how-to-pronounce-");
-  createWebsiteButton("Dictionary.com", "https://www.dictionary.com/browse/");
+  createWebsiteButton(
+    "Howjsay",
+    "https://howjsay.com/how-to-pronounce-",
+    "images/howjsay.png"
+  );
+  createWebsiteButton(
+    "Dictionary.com",
+    "https://www.dictionary.com/browse/",
+    "images/dict-com.png"
+  );
   createWebsiteButton(
     "Cambridge Dictionary",
-    "https://dictionary.cambridge.org/dictionary/english/"
+    "https://dictionary.cambridge.org/dictionary/english/",
+    "images/cam-dict.jpeg"
   );
-  createWebsiteButton("Youglish", "https://youglish.com/pronounce/");
+  createWebsiteButton(
+    "Youglish",
+    "https://youglish.com/pronounce/",
+    "images/brandyg.png"
+  );
 
   container.style.left = x + 20 + "px";
   container.style.top = y + 10 + "px";
@@ -26,15 +41,25 @@ function createFloatingButtonContainer(x, y) {
   });
 }
 
-function createWebsiteButton(btnTitle, baseUrl) {
-  const button = document.createElement("button");
-  button.textContent = btnTitle;
+function createWebsiteButton(btnTitle, baseUrl, iconUrl) {
+  // const button = document.createElement("button");
+  // button.textContent = btnTitle;
+  // button.className = "floating-button";
+  const button = document.createElement("img");
+  button.src = chrome.runtime.getURL(iconUrl); // Set the path to your desired image
+  button.alt = btnTitle;
+  button.width = 32;
+  button.height = 32;
   button.className = "floating-button";
+  button.style.cursor = "pointer";
+
   button.addEventListener("click", function (event) {
-    const selectedText = window.getSelection().toString().toLowerCase().trim();;
+    const selectedText = window.getSelection().toString().toLowerCase().trim();
     const url = `${baseUrl}${selectedText}`;
     openWebDict(event, url);
-    container.remove();
+    if (container) {
+      container.remove();
+    }
   });
   websiteButtonList.push(button);
 }
@@ -56,7 +81,6 @@ document.addEventListener("mousedown", function (event) {
   const floatingButtonContainer = document.querySelector(
     ".floating-button-container"
   );
-
 
   if (
     floatingButtonContainer &&
