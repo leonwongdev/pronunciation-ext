@@ -67,8 +67,6 @@ document.addEventListener("mousedown", function (event) {
   }
 });
 
-// console.log("Loaded content script");
-
 function openWebDict(event, url) {
   const newWindow = {
     left: event.clientX + "px",
