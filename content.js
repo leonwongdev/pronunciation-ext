@@ -1,38 +1,42 @@
 // content.js
+let websiteButtonList = [];
+
 function createFloatingButtonContainer(x, y) {
+  // reset the button list so that new buttons / links can be created for new text selection
+  websiteButtonList = [];
+
   const container = document.createElement("div");
 
   container.className = "floating-button-container";
-  // buttons below
-  const youglishButton = document.createElement("button");
-  youglishButton.textContent = "Youglish";
-  youglishButton.className = "floating-button";
 
-  youglishButton.addEventListener("click", function (event) {
-    console.log("youglishButton called");
-    const selectedText = window.getSelection().toString();
-    const url = `https://youglish.com/pronounce/${selectedText}/english?`;
-    openWebDict(event, url);
-    container.remove();
-  });
-
-  const howjsayButton = document.createElement("button");
-  howjsayButton.textContent = "Howjsay";
-  howjsayButton.className = "floating-button";
-  howjsayButton.addEventListener("click", function (event) {
-    console.log("howjsay called");
-    const selectedText = window.getSelection().toString();
-    const url = `https://howjsay.com/how-to-pronounce-${selectedText}`;
-    openWebDict(event, url);
-    container.remove();
-  });
+  createWebsiteButton("Howjsay", "https://howjsay.com/how-to-pronounce-");
+  createWebsiteButton("Dictionary.com", "https://www.dictionary.com/browse/");
+  createWebsiteButton(
+    "Cambridge Dictionary",
+    "https://dictionary.cambridge.org/dictionary/english/"
+  );
+  createWebsiteButton("Youglish", "https://youglish.com/pronounce/");
 
   container.style.left = x + 20 + "px";
   container.style.top = y + 10 + "px";
 
   document.body.appendChild(container);
-  container.appendChild(youglishButton);
-  container.appendChild(howjsayButton);
+  websiteButtonList.forEach((button) => {
+    container.appendChild(button);
+  });
+}
+
+function createWebsiteButton(btnTitle, baseUrl) {
+  const button = document.createElement("button");
+  button.textContent = btnTitle;
+  button.className = "floating-button";
+  button.addEventListener("click", function (event) {
+    const selectedText = window.getSelection().toString().toLowerCase().trim();;
+    const url = `${baseUrl}${selectedText}`;
+    openWebDict(event, url);
+    container.remove();
+  });
+  websiteButtonList.push(button);
 }
 
 document.addEventListener("mouseup", function (event) {
@@ -52,7 +56,7 @@ document.addEventListener("mousedown", function (event) {
   const floatingButtonContainer = document.querySelector(
     ".floating-button-container"
   );
-  const floatingButton = document.querySelector(".floating-button");
+
 
   if (
     floatingButtonContainer &&
@@ -66,7 +70,7 @@ document.addEventListener("mousedown", function (event) {
 // console.log("Loaded content script");
 
 function openWebDict(event, url) {
-  const youglishWindow = {
+  const newWindow = {
     left: event.clientX + "px",
     top: event.clientY + "px",
     viewportWidth:
@@ -82,6 +86,6 @@ function openWebDict(event, url) {
   window.open(
     url,
     "_blank",
-    `width=${youglishWindow.viewportWidth}, height=${youglishWindow.viewportHeight}, left=${youglishWindow.left}, top=${youglishWindow.top}`
+    `width=${newWindow.viewportWidth}, height=${newWindow.viewportHeight}, left=${newWindow.left}, top=${newWindow.top}`
   );
 }
