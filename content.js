@@ -48,8 +48,8 @@ function createWebsiteButton(btnTitle, baseUrl, iconUrl) {
   const button = document.createElement("img");
   button.src = chrome.runtime.getURL(iconUrl); // Set the path to your desired image
   button.alt = btnTitle;
-  button.width = 32;
-  button.height = 32;
+  button.width = 16;
+  button.height = 16;
   button.className = "floating-button";
   button.style.cursor = "pointer";
 
