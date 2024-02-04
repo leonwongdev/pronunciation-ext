@@ -5,11 +5,11 @@
   background-color: #ffffff;
   color: rgb(251, 119, 119);
   border: 1px solid rgb(52, 52, 52);
-  border-radius: 5%;
+  border-radius: 5px;
   padding: 5px;
   margin: 2px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   display: inline-block;
 }
 
@@ -19,11 +19,11 @@
   background-color: #ffffff;
   color: red;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   /* padding: 5px; */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .floating-button:hover {

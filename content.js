@@ -32,8 +32,8 @@ function createFloatingButtonContainer(x, y) {
     "images/brandyg.png"
   );
 
-  container.style.left = x + 20 + "px";
-  container.style.top = y + 10 + "px";
+  container.style.left = x + -20 + "px";
+  container.style.top = y + -55 + "px";
 
   document.body.appendChild(container);
   websiteButtonList.forEach((button) => {
@@ -48,8 +48,8 @@ function createWebsiteButton(btnTitle, baseUrl, iconUrl) {
   const button = document.createElement("img");
   button.src = chrome.runtime.getURL(iconUrl); // Set the path to your desired image
   button.alt = btnTitle;
-  button.width = 32;
-  button.height = 32;
+  button.width = 28;
+  button.height = 28;
   button.className = "floating-button";
   button.style.cursor = "pointer";
 
