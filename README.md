@@ -1,14 +1,20 @@
-# Youglish & Howjsay Pronunciation Chrome Extension
+# Dictionary floating buttons Chrome Extension
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/clhkbghopdclagfplhknlhcpnjefpacd.svg?style=flat-square)](https://chrome.google.com/webstore/detail/youglish-howjsay-pronunci/clhkbghopdclagfplhknlhcpnjefpacd)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/clhkbghopdclagfplhknlhcpnjefpacd.svg?style=flat-square)](https://chromewebstore.google.com/detail/dictionary-search-diction/clhkbghopdclagfplhknlhcpnjefpacd)
 
 ## Description
 
-This Chrome extension provides floating buttons for quick word pronunciation searches on Youglish and Howjsay. It makes it easy for users to access pronunciation information while browsing the web.
+This Chrome extension provides floating buttons for quickly searching word pronunciations on numerous dictionary websites, such as Youglish and Howjsay. It makes it easy for users to access pronunciation information while browsing the web.
+
+Supported websites:
+1. Dictionary.com
+2. Howjsay.com
+3. Cambridge Dictionary
+4. Youglish.com
 
 ## Installation
 
-You can download and install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/youglish-howjsay-pronunci/clhkbghopdclagfplhknlhcpnjefpacd).
+You can download and install the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/dictionary-search-diction/clhkbghopdclagfplhknlhcpnjefpacd).
 
 ## Features
 
