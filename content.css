@@ -11,6 +11,9 @@
   cursor: pointer;
   font-size: 12px;
   display: inline-block;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
 }
 
 .floating-button-container {
