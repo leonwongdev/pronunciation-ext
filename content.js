@@ -42,14 +42,9 @@ function createFloatingButtonContainer(x, y) {
 }
 
 function createWebsiteButton(btnTitle, baseUrl, iconUrl) {
-  // const button = document.createElement("button");
-  // button.textContent = btnTitle;
-  // button.className = "floating-button";
   const button = document.createElement("img");
   button.src = chrome.runtime.getURL(iconUrl); // Set the path to your desired image
   button.alt = btnTitle;
-  button.width = 28;
-  button.height = 28;
   button.className = "floating-button";
   button.style.cursor = "pointer";
 
