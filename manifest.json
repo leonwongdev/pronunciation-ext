@@ -1,7 +1,7 @@
 {
-    "name": "Dictionary Search (Dictionary.com/Youglish)",
-    "version": "1.0.6",
-    "description": "Provides floating buttons for a quick search on word pronunciation on multiple websites.",
+    "name": "Popup Dict (Dictionary.com/Youglish/Cambridge Dict)",
+    "version": "1.0.7",
+    "description": "Highlight to define: Multi-dictionary popups at your fingertips.\nAccess top reference sites instantly for any selected text.",
     "permissions": [
         ""
     ],
