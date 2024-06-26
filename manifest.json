@@ -1,9 +1,9 @@
 {
     "name": "Dictionary Search (Dictionary.com/Youglish)",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Provides floating buttons for a quick search on word pronunciation on multiple websites.",
     "permissions": [
-        "activeTab"
+        ""
     ],
     "manifest_version": 3,
     "author": "Leon",
