@@ -8,36 +8,47 @@ function createFloatingButtonContainer(x, y) {
   websiteButtonList = [];
 
   const container = document.createElement("div");
-
   container.className = "floating-button-container";
 
-  createWebsiteButton(
-    "Howjsay",
-    "https://howjsay.com/how-to-pronounce-",
-    "images/howjsay.png"
-  );
-  createWebsiteButton(
-    "Dictionary.com",
-    "https://www.dictionary.com/browse/",
-    "images/dict-com.png"
-  );
-  createWebsiteButton(
-    "Cambridge Dictionary",
-    "https://dictionary.cambridge.org/dictionary/english/",
-    "images/cam-dict.jpeg"
-  );
-  createWebsiteButton(
-    "Youglish",
-    "https://youglish.com/pronounce/",
-    "images/brandyg.png"
-  );
+  chrome.storage.sync.get(["dictionaries"], function (result) {
+    const dictionaries = result.dictionaries || {};
 
-  container.style.left = x + -20 + "px";
-  container.style.top = y + -55 + "px";
+    if (dictionaries.howjsay !== false) {
+      createWebsiteButton(
+        "Howjsay",
+        "https://howjsay.com/how-to-pronounce-",
+        "images/howjsay.png"
+      );
+    }
+    if (dictionaries.dictionarycom !== false) {
+      createWebsiteButton(
+        "Dictionary.com",
+        "https://www.dictionary.com/browse/",
+        "images/dict-com.png"
+      );
+    }
+    if (dictionaries.cambridge !== false) {
+      createWebsiteButton(
+        "Cambridge Dictionary",
+        "https://dictionary.cambridge.org/dictionary/english/",
+        "images/cam-dict.jpeg"
+      );
+    }
+    if (dictionaries.youglish !== false) {
+      createWebsiteButton(
+        "Youglish",
+        "https://youglish.com/pronounce/",
+        "images/brandyg.png"
+      );
+    }
 
-  document.body.appendChild(container);
-  websiteButtonList.forEach((button) => {
-    container.appendChild(button);
+    container.style.left = x + -20 + "px";
+    container.style.top = y + -55 + "px";
+
+    document.body.appendChild(container);
+    websiteButtonList.forEach((button) => {
+      container.appendChild(button);
+    });
   });
 }
 

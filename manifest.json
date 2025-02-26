@@ -3,7 +3,7 @@
     "version": "1.0.7",
     "description": "Look up words instantly while you browse.\nHighlight text to see popups from multiple dictionaries – simple and fast.",
     "permissions": [
-        ""
+        "storage"
     ],
     "manifest_version": 3,
     "author": "Leon",
@@ -16,6 +16,7 @@
         "default_popup": "popup.html",
         "default_title": "Dictionary Search (Dictionary.com/Youglish)"
     },
+    "options_page": "options.html",
     "content_scripts": [
         {
             "matches": [
