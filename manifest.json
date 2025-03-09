@@ -1,6 +1,6 @@
 {
     "name": "Popup Dict (Dictionary.com/Youglish/Cambridge Dict)",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Look up words instantly while you browse.\nHighlight text to see popups from multiple dictionaries – simple and fast.",
     "permissions": [
         "storage"

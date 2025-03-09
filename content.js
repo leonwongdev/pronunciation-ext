@@ -2,6 +2,7 @@
 console.debug("Loaded dictionary search extension");
 
 let websiteButtonList = [];
+let timer; // Variable to keep track of the timer
 
 function createFloatingButtonContainer(x, y) {
   // reset the button list so that new buttons / links can be created for new text selection
@@ -71,6 +72,7 @@ function createWebsiteButton(btnTitle, baseUrl, iconUrl) {
 }
 
 document.addEventListener("mouseup", function (event) {
+  clearTimeout(timer); // Clear the timer on mouseup
   const floatingButtonContainer = document.querySelector(
     ".floating-button-container"
   );
@@ -79,7 +81,24 @@ document.addEventListener("mouseup", function (event) {
   }
   const selectedText = window.getSelection().toString().trim();
   if (selectedText !== "") {
-    createFloatingButtonContainer(event.clientX, event.clientY);
+    chrome.storage.sync.get(["useTimer", "timerDuration"], function (result) {
+      // Explicitly check if useTimer is true, default to false
+      const useTimer = result.useTimer === true;
+      const timerDuration = result.timerDuration || 500; // Default to 500ms if not set
+
+      if (useTimer) {
+        // Check if mouse was held for the configured duration
+        if (
+          event.button === 0 &&
+          event.timeStamp - event.target.dataset.mousedownTimestamp >=
+            timerDuration
+        ) {
+          createFloatingButtonContainer(event.clientX, event.clientY);
+        }
+      } else {
+        createFloatingButtonContainer(event.clientX, event.clientY);
+      }
+    });
   }
 });
 
@@ -94,6 +113,16 @@ document.addEventListener("mousedown", function (event) {
     event.target.className !== "floating-button"
   ) {
     floatingButtonContainer.remove();
+  }
+
+  // Start the timer on mousedown
+  if (event.button === 0) {
+    event.target.dataset.mousedownTimestamp = event.timeStamp;
+
+    chrome.storage.sync.get(["timerDuration"], function (result) {
+      const timerDuration = result.timerDuration || 500; // Default to 500ms if not set
+      timer = setTimeout(() => {}, timerDuration);
+    });
   }
 });
 

@@ -25,6 +25,28 @@
         <input type="checkbox" name="youglish" />
         Youglish </label
       ><br />
+      <label>
+        <input type="checkbox" name="useTimer" />
+        Delay buttons until mouse is held down </label
+      ><br />
+      <div style="margin-left: 20px">
+        <label>
+          Timer duration (milliseconds):
+          <input
+            type="number"
+            name="timerDuration"
+            min="100"
+            max="2000"
+            step="100"
+            value="500"
+          />
+        </label>
+      </div>
+      <small style="margin-left: 20px; color: #666">
+        When enabled, dictionary buttons will only appear after holding your
+        mouse down for the specified duration. This prevents accidental popups
+        when quickly selecting text. </small
+      ><br />
       <button type="submit">Save</button>
     </form>
     <p>

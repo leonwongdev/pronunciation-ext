@@ -7,6 +7,7 @@
 This Chrome extension provides floating buttons for quickly searching word pronunciations on numerous dictionary websites, such as Youglish and Howjsay. It makes it easy for users to access pronunciation information while browsing the web.
 
 Supported websites:
+
 1. Dictionary.com
 2. Howjsay.com
 3. Cambridge Dictionary
@@ -35,4 +36,8 @@ If you encounter any issues or have suggestions for improvement, feel free to [o
 
 This project is licensed under the [MIT License](LICENSE).
 
+## Contributors
 
+Thanks to everyone who has contributed to this project!
+
+- [@wilsonkor](https://github.com/wilsonkor) - Contributed feature implementation for configurable delay timer to prevent accidental button triggers during text selection.
