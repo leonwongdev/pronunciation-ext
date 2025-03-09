@@ -41,3 +41,31 @@ This project is licensed under the [MIT License](LICENSE).
 Thanks to everyone who has contributed to this project!
 
 - [@wilsonkor](https://github.com/wilsonkor) - Contributed feature implementation for configurable delay timer to prevent accidental button triggers during text selection.
+
+## Changelog
+
+### v1.0.9
+
+- Added configurable timing options for dictionary popup buttons
+- New setting allows users to adjust delay duration to prevent accidental triggers
+- Users can now choose whether popup buttons appear immediately or after holding mouse for a customized duration
+
+### v1.0.8
+
+- Added options to enable/disable individual dictionaries
+
+### v1.0.7
+
+- Renamed the extension from "Dictionary Search" to "Popup Dict"
+
+### v1.0.6
+
+- Removed active tab permission for improved privacy
+
+### v1.0.5
+
+- Fixed inconsistent icon size
+
+### v1.0.4
+
+- Used website icons as buttons to reduce the menu size
